@@ -175,14 +175,12 @@ main {
 .project-section{
   background-color:rgb(40, 44, 59);
   margin-top: 150px;
-  height: 2180px;
-  position: absolute;
+  position: relative;
   width: 100%;
+   padding-top: 200px;
+  padding-bottom: -300px
 }
 
-.project-container{
-  margin-top: 200px;
-}
 
 .project-title{
   display: flex;
@@ -370,8 +368,6 @@ main {
   width: 100%;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
   gap: 40px;
 }
 
@@ -384,6 +380,8 @@ main {
   align-items: center;
   transition: 0.2s;
   background-color: rgb(66, 70, 87);
+  position: relative;
+  top: 150px;
 }
 
 .contactsv{
@@ -395,6 +393,8 @@ main {
   align-items: center;
   transition: 0.2s;
   background-color: rgb(60, 197, 110);
+  position: relative;
+  top: 150px;
 }
 
 .Github{
@@ -415,8 +415,14 @@ main {
   text-align: center;
 }
 
-.kk{
-  position: relative;
-  top: 11110px;
+.comp-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: rgb(223, 231, 237);
+  margin-top: 400px;
 }
-
