@@ -162,14 +162,34 @@ main {
   font-size: 25px;
 }
 
-.lien a{
+.lien a {
   color: rgb(78, 246, 140);
-  transition: 0.5s;
   text-decoration: none;
+  position: relative; 
+  transition: color 0.5s;
 }
 
-.lien a:hover{
-  color: rgb(216, 232, 222);
+
+.lien a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;        
+  width: 100%;
+  height: 2px;         
+  background-color: rgb(216, 232, 222);
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: transform 0.5s ;
+}
+
+
+.lien a:hover::after {
+  transform: scaleX(1); 
+}
+
+.lien a:hover {
+  color: rgb(216, 232, 222); 
 }
 
 .project-section{
@@ -274,6 +294,11 @@ main {
   justify-content: center;
   font-size: 20px;
   transition: 0.5s;
+}
+
+.projet2 a:hover{
+  color: rgb(207, 236, 213);
+  background-color:   rgb(44, 45, 56)
 }
 
 .projet a:hover{
