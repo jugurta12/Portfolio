@@ -698,7 +698,7 @@ li:hover {
 
 .contactsv,
 .contactsv a {
-  color: rgb(78, 246, 140);;
+  color: rgb(60, 197, 110);
   transition: 0.5s 1s;
 }
 
@@ -706,3 +706,18 @@ li:hover {
 .contactsv.active a{
   color: aliceblue; 
 }
+
+.contacts,
+.contacts a {
+  color: rgb(66, 70, 87);
+  transition: 0.5s 1s;
+}
+
+.contacts.active,
+.contacts.active a{
+  color: aliceblue; 
+}
+
+
+
+
