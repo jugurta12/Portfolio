@@ -43,7 +43,7 @@ links.forEach(link => {
 });
 
 
-const slideElements = document.querySelectorAll('.desc, .lien, .nom, .projets, .projets2, contacts, contactv');
+const slideElements = document.querySelectorAll('.desc, .lien, .nom, .projets, .projets2, .contacts, .contactsv');
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {

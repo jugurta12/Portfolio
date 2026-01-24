@@ -696,15 +696,13 @@ li:hover {
 
 
 
-.contacts,
-.contacts a {
+.contactsv,
+.contactsv a {
   color: rgb(78, 246, 140);;
-  transition: opacity 1s ease-out, transform 0.5s ease-out;
-  transform: translateY(50px);
+  transition: 0.5s 1s;
 }
 
-.contacts.active,
-.contacts.active a{
-  opacity: 1;
-  transform: translateY(0px);
+.contactsv.active,
+.contactsv.active a{
+  color: aliceblue; 
 }
