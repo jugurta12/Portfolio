@@ -444,7 +444,7 @@ input[type="radio"] {
 .skills-menu {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 30%;
   margin-left: 100px;
   margin-top: 100px;
@@ -457,16 +457,22 @@ input[type="radio"] {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
-  background-color: #1a1923;
+  background-color: rgb(50, 54, 71);
 }
 
 .skills-menu label:hover {
   transform: translateX(-10px);
+  color: rgb(196, 243, 213);
 }
 
 .skills-content .content {
-  display: none; /* Rien n’apparaît par défaut */
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+  position: absolute; /* pour éviter que ça pousse les autres blocs */
+  transition: opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.6s cubic-bezier(.4,0,.2,1);
 }
+
 
 .skills-content {
   flex: 1;
@@ -483,9 +489,26 @@ input[type="radio"] {
 
 .skills-content ul {
   padding-left: 20px;
+    font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  /* 1. La graisse : utilise 600 (Semi-Bold) ou 700 (Bold) */
+  font-weight: 600;
+  margin-top: 100px; 
+  
+  /* 2. L'effet serré : indispensable pour ce look moderne */
+  letter-spacing: -0.04em; 
+  
+  /* 3. Taille et couleur (adaptées à ton image) */
+  font-size: 48px;
+  color: #FFFFFF;
+  
+  /* 4. Rendu net sur fond sombre */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  list-style: none;
+  padding: 0
 }
 
-/* Affichage du contenu sélectionné */
 #frontend:checked ~ .skills-content .frontend,
 #backend:checked ~ .skills-content .backend,
 #bdd:checked ~ .skills-content .bdd,
@@ -493,7 +516,9 @@ input[type="radio"] {
 #outils:checked ~ .skills-content .outils,
 #gestion:checked ~ .skills-content .gestion,
 #algo:checked ~ .skills-content .algo {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* Style du label actif */
@@ -513,4 +538,76 @@ input[type="radio"] {
 border: 1px solid white;
 width: 15px;
 height: 15px;
+}
+
+.content.gestion{
+  width: 80%;
+  position: relative;
+  top:100px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+li{
+  transition: 0.3s;
+  cursor: default;
+  
+}
+li:hover {
+  color: rgb(196, 243, 213);
+  margin-bottom: 8px;
+}
+
+
+.back-to-top {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  padding: 14px 28px;
+  font-size: 16px;
+  background-color: rgb(50, 54, 71);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  transition: 0.3s;
+}
+
+.back-to-top:hover {
+  color: rgb(196, 243, 213);
+}
+
+.arrow {
+  font-size: 40px;
+  display: flex;
+  animation: arrowLoop 1.8s infinite;
+}
+
+@keyframes arrowLoop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  31% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
