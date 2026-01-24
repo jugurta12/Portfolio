@@ -594,14 +594,13 @@ li:hover {
   background-color: rgb(50, 54, 71);
   color: white;
   border: none;
-  border-radius: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: sans-serif;
   overflow: hidden;
-  width: 100%;
+  width: 95%;
   justify-content: center;
   margin-bottom: 50px;
   margin-top: 50px;
@@ -615,7 +614,7 @@ li:hover {
 .arrow {
   font-size: 40px;
   display: flex;
-  animation: arrowLoop 1.8s infinite;
+  animation: arrowLoop 3s infinite;
 }
 
 @keyframes arrowLoop {
