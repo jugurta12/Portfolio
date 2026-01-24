@@ -635,3 +635,32 @@ li:hover {
     opacity: 1;
   }
 }
+
+.nom {
+  opacity: 0;
+  transition: opacity 0.7s ease-out 0.1s;
+}
+
+.nom.active {
+  opacity: 1;
+}
+
+.desc {
+  opacity: 0;
+  transition: opacity 1s ease-out 0.3s;
+}
+
+.desc.active {
+  opacity: 1;
+}
+
+.lien {
+  opacity: 0;
+  transition: opacity 1s ease-out 0.5s;
+}
+
+.lien.active {
+  opacity: 1;
+  
+}
+
