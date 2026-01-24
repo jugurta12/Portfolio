@@ -23,20 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Sélectionne tous les liens qui commencent par #
+
 const links = document.querySelectorAll('a[href^="#"]');
 
 links.forEach(link => {
   link.addEventListener('click', function(e) {
-    e.preventDefault(); // empêche le jump direct
+    e.preventDefault(); 
 
-    const targetId = this.getAttribute('href'); // récupère l'ancre
+    const targetId = this.getAttribute('href'); 
     const targetElement = document.querySelector(targetId);
 
     if (targetElement) {
       targetElement.scrollIntoView({
-        behavior: 'smooth', // le smooth scroll
-        block: 'start'      // scroll jusqu'en haut de l'élément
+        behavior: 'smooth', 
+        block: 'start'     
       });
     }
   });
