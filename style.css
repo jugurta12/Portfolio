@@ -409,6 +409,20 @@ main {
   top: 150px;
 }
 
+.contacts2{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  background-color: rgb(66, 70, 87);
+  position: relative;
+  top: 150px;
+}
+
+
 .contactsv{
   display: flex;
   flex-direction: column;
@@ -699,7 +713,7 @@ li:hover {
 .contactsv,
 .contactsv a {
   color: rgb(60, 197, 110);
-  transition: 0.5s 1s;
+  transition: 0.5s 0.7s;
 }
 
 .contactsv.active,
@@ -707,10 +721,22 @@ li:hover {
   color: aliceblue; 
 }
 
+.contacts2,
+.contacts2 a {
+  color: rgb(66, 70, 87);
+  transition: 0.5s 0.5s;
+}
+
+.contacts2.active,
+.contacts2.active a{
+  color: aliceblue; 
+}
+
+
 .contacts,
 .contacts a {
   color: rgb(66, 70, 87);
-  transition: 0.5s 1s;
+  transition: 0.5s 0.3s;
 }
 
 .contacts.active,
@@ -718,6 +744,20 @@ li:hover {
   color: aliceblue; 
 }
 
+.skills-menu label {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.skills-menu.active label {
+  opacity: 1;
+}
 
+.skills-menu.active label:nth-child(1) { transition-delay: 0s; }
+.skills-menu.active label:nth-child(2) { transition-delay: 0.2s; }
+.skills-menu.active label:nth-child(3) { transition-delay: 0.4s; }
+.skills-menu.active label:nth-child(4) { transition-delay: 0.6s; }
+.skills-menu.active label:nth-child(5) { transition-delay: 0.8s; }
+.skills-menu.active label:nth-child(6) { transition-delay: 1s; }
+.skills-menu.active label:nth-child(7) { transition-delay: 1.2s; }
 
