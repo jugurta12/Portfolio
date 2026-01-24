@@ -683,15 +683,28 @@ li:hover {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Quand le parent .projets2 devient actif */
 .projets2.active .projet2 {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Délais pour chaque enfant (stagger) */
 .projets2.active .projet2:nth-child(1) { transition-delay: 0s; }
 .projets2.active .projet2:nth-child(2) { transition-delay: 0.2s; }
 .projets2.active .projet2:nth-child(3) { transition-delay: 0.4s; }
 .projets2.active .projet2:nth-child(4) { transition-delay: 0.6s; }
 .projets2.active .projet2:nth-child(5) { transition-delay: 0.8s; }
+
+
+
+.contacts,
+.contacts a {
+  color: rgb(78, 246, 140);;
+  transition: opacity 1s ease-out, transform 0.5s ease-out;
+  transform: translateY(50px);
+}
+
+.contacts.active,
+.contacts.active a{
+  opacity: 1;
+  transform: translateY(0px);
+}
